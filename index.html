@@ -7,16 +7,14 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-      <!-- 3D Choco Lava Pastry Model -->
-      <a-entity 
-        gltf-model="url(https://example.com/choco-lava-pastry.glb)" 
-        position="0 0 0" 
-        rotation="0 180 0" 
-        scale="0.5 0.5 0.5">
-      </a-entity>
+  <a-marker preset="hiro">
+    <a-entity gltf-model="chocolate_pastry_ti2jdifva_mid.glb"
+              position="0 0 0"
+              rotation="0 180 0"
+              scale="0.5 0.5 0.5"></a-entity>
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
 
-      <!-- Camera -->
-      <a-marker-camera preset='hiro'></a-marker-camera>
-    </a-scene>
   </body>
 </html>
