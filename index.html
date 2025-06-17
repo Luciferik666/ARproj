@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Choco Lava Pastry AR</title>
+    <title>Markerless Choco Lava AR</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ar-js-org/ar.js@3.4.2/aframe/build/aframe-ar-nft.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
-  <a-marker preset="hiro">
-    <a-entity gltf-model="chocolate_pastry_ti2jdifva_mid.glb"
-              position="0 0 0"
-              rotation="0 180 0"
-              scale="0.5 0.5 0.5"></a-entity>
-  </a-marker>
-  <a-entity camera></a-entity>
-</a-scene>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+    >
+      <!-- Pastry Entity -->
+      <a-entity 
+        gltf-model="url(https://example.com/your-pastry.glb)" 
+        position="0 0 -3" 
+        rotation="0 180 0" 
+        scale="0.5 0.5 0.5">
+      </a-entity>
 
+      <a-entity camera></a-entity>
+    </a-scene>
   </body>
 </html>
